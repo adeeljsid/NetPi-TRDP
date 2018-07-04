@@ -15,7 +15,7 @@ ENV HILSCHERNETPI_NETX_TCPIP_NETWORK_INTERFACE_VERSION 0.9.1.0
 #copy files
 COPY "./init.d/*" /etc/init.d/ 
 COPY "./driver/*" "./firmware/*" /tmp/
-COPY "./TRDP/*" /tmp/
+COPY "./TRDP/*" /tmp/TRDP
 
 #do installation
 RUN apt-get update  \
