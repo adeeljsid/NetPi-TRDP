@@ -36,9 +36,8 @@ RUN apt-get update  \
     && dpkg -i /tmp/netx-docker-pi-drv-1.1.3.deb \
     && dpkg -i /tmp/netx-docker-pi-pns-eth-3.12.0.8.deb \
 #install TRDP package
-    && cd /tmp/TRDP \
-    && make LINUX_config \
-    && make -f Makefile \
+    && make -c /tmp/TRDP LINUX_config \
+    && make -c /tmp/TRDP -f Makefile \
 #compile netX network daemon
     && gcc /tmp/cifx0daemon.c -o /opt/cifx/cifx0daemon -I/usr/include/cifx -Iincludes/ -lcifx -pthread \
 #clean up
