@@ -37,8 +37,8 @@ RUN apt-get update  \
     && dpkg -i /tmp/netx-docker-pi-pns-eth-3.12.0.8.deb \
 #install TRDP package
     && cd /tmp/TRDP \
-    && sudo make LINUX_config \
-    && sudo make -f Makefile \
+    && make LINUX_config \
+    && make -f Makefile \
 #compile netX network daemon
     && gcc /tmp/cifx0daemon.c -o /opt/cifx/cifx0daemon -I/usr/include/cifx -Iincludes/ -lcifx -pthread \
 #clean up
