@@ -12,6 +12,9 @@ LABEL maintainer="netpi@hilscher.com" \
 #version
 ENV HILSCHERNETPI_NETX_TCPIP_NETWORK_INTERFACE_VERSION 0.9.1.0
 
+#Creating additional directory
+RUN mkdir /tmp/TRDP
+
 #copy files
 COPY "./init.d/*" /etc/init.d/ 
 COPY "./driver/*" "./firmware/*" /tmp/
