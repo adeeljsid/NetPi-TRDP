@@ -18,7 +18,7 @@ RUN mkdir /tmp/TRDP
 #copy files
 COPY "./init.d/*" /etc/init.d/ 
 COPY "./driver/*" "./firmware/*" /tmp/
-COPY "./TRDP/*" /tmp/TRDP
+COPY "./TRDP/*" /tmp/TRDP/
 
 #do installation
 RUN apt-get update  \
